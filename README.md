@@ -4,92 +4,92 @@
 
 ### Sistema integral de gestión para gimnasios
 
-Aplicación web full stack desarrollada para administrar usuarios, membresías, entrenamientos, pagos y control general de un gimnasio.
+Aplicación web full stack desarrollada para la administración de usuarios, membresías, rutinas, pagos y control general de un gimnasio.
 
 ---
 
-![Angular](https://img.shields.io/badge/Frontend-Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white)
-![PHP](https://img.shields.io/badge/Backend-PHP-777BB4?style=for-the-badge&logo=php&logoColor=white)
+![Java](https://img.shields.io/badge/Backend-Java-orange?style=for-the-badge&logo=openjdk&logoColor=white)
+![Spring Boot](https://img.shields.io/badge/Framework-SpringBoot-6DB33F?style=for-the-badge&logo=springboot&logoColor=white)
+![HTML5](https://img.shields.io/badge/Frontend-HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/Styles-CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 ![MySQL](https://img.shields.io/badge/Database-MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
 
 </div>
 
 ---
 
-## 📌 Descripción del proyecto
+# 📌 Descripción
 
-Gym Management System es una solución tecnológica diseñada para optimizar la administración de gimnasios mediante una plataforma moderna y escalable.
+Gym Management System es una plataforma web diseñada para optimizar y centralizar la administración de gimnasios mediante herramientas digitales modernas.
 
 El sistema permite gestionar:
 
-- 👥 Usuarios y roles
-- 💳 Membresías
-- 📅 Reservas o control de acceso
-- 🏋️ Rutinas y planes de entrenamiento
-- 💰 Pagos y control financiero
-- 📊 Administración general del gimnasio
+- 👥 Usuarios y clientes
+- 🏋️ Membresías
+- 📅 Control y administración
+- 💳 Pagos
+- 📊 Reportes administrativos
+- 🔐 Seguridad y autenticación
 
-Este proyecto está dividido en una arquitectura modular basada en tres repositorios independientes:
+El proyecto se divide en 3 repositorios independientes:
 
 ---
 
-# 📂 Repositorios del proyecto
+# 📂 Repositorios
 
-## 🔧 Backend API
+## 🔧 Backend
 
-Repositorio encargado de toda la lógica de negocio, autenticación, seguridad y conexión con base de datos.
+Encargado de la lógica de negocio, API REST, autenticación y conexión con base de datos.
 
 🔗 **Repositorio:**  
 https://github.com/Brayanperdomoo/gym-back-end
 
-### Funcionalidades principales
+### Funcionalidades
 
 - API REST
 - CRUD completo
 - Validaciones
-- Autenticación y autorización
-- Manejo de roles
-- Conexión a base de datos
-- Arquitectura limpia
+- Seguridad
+- Autenticación
+- Gestión de usuarios
+- Control de membresías
 
 ### Tecnologías
 
-- PHP
-- JWT/Auth
-- API REST
+- Java
+- Spring Boot
+- Maven
+- JPA / Hibernate
 - MySQL
 
 ---
 
 ## 🎨 Frontend
 
-Interfaz gráfica del sistema desarrollada para brindar una experiencia moderna, intuitiva y responsive.
+Interfaz visual del sistema enfocada en experiencia de usuario sencilla y funcional.
 
 🔗 **Repositorio:**  
 https://github.com/Brayanperdomoo/gym-front-end
 
-### Funcionalidades principales
+### Funcionalidades
 
-- Dashboard administrativo
 - Login
-- Gestión visual de usuarios
-- Formularios dinámicos
-- Responsive design
-- Consumo de API
+- Dashboard administrativo
+- Formularios
+- Visualización de datos
+- Navegación responsive
 
 ### Tecnologías
 
-- Angular
-- TypeScript
-- Bootstrap
 - HTML5
 - CSS3
+- JavaScript
 
 ---
 
 ## 🗄️ Database
 
-Repositorio encargado del modelado y estructura de la base de datos.
+Estructura y modelado relacional de la base de datos.
 
 🔗 **Repositorio:**  
 https://github.com/Brayanperdomoo/gym-database
@@ -97,11 +97,10 @@ https://github.com/Brayanperdomoo/gym-database
 ### Contenido
 
 - Scripts SQL
-- Modelo relacional
 - Tablas
 - Relaciones
 - Constraints
-- Datos semilla
+- Datos iniciales
 
 ### Tecnologías
 
@@ -115,18 +114,19 @@ https://github.com/Brayanperdomoo/gym-database
 ```bash
 Gym Management System
 │
-├── Frontend (Angular)
+├── gym-front-end
+│   ├── HTML
+│   ├── CSS
+│   └── JavaScript
 │
-├── Backend (PHP/API REST)
+├── gym-back-end
+│   ├── Java
+│   ├── Spring Boot
+│   └── API REST
 │
-└── Database (MySQL)
+└── gym-database
+    └── MySQL
 ```
-
-Arquitectura basada en separación de responsabilidades:
-
-- **Frontend:** experiencia de usuario
-- **Backend:** lógica de negocio
-- **Database:** persistencia de datos
 
 ---
 
@@ -144,47 +144,59 @@ git clone https://github.com/Brayanperdomoo/gym-database.git
 
 ## 2. Base de datos
 
-Importar script SQL desde:
+Importar el script SQL ubicado en:
 
 ```bash
 gym-database/
 ```
 
-Crear base de datos en MySQL.
+Crear la base de datos en MySQL.
 
 ---
 
 ## 3. Backend
 
-Configurar variables de conexión a base de datos y ejecutar servidor.
-
-Ejemplo:
+Entrar al proyecto:
 
 ```bash
-php -S localhost:8000
+cd gym-back-end
+```
+
+Ejecutar:
+
+```bash
+mvn spring-boot:run
+```
+
+Servidor por defecto:
+
+```bash
+http://localhost:8080
 ```
 
 ---
 
 ## 4. Frontend
 
-Instalar dependencias:
+Abrir proyecto frontend y ejecutar desde navegador o Live Server.
+
+Ejemplo:
 
 ```bash
-npm install
+index.html
 ```
 
-Ejecutar proyecto:
+---
 
-```bash
-ng serve
-```
+# 🚀 Características principales
 
-Abrir:
-
-```bash
-http://localhost:4200
-```
+- Gestión de clientes
+- Gestión de membresías
+- Registro de pagos
+- Administración general
+- Arquitectura modular
+- API RESTful
+- Base de datos relacional
 
 ---
 
@@ -192,30 +204,29 @@ http://localhost:4200
 
 ## Brayan Perdomo
 
-Desarrollador Full Stack en formación enfocado en:
+Desarrollador enfocado en:
 
-- Backend
-- Frontend
+- Backend Java
+- Spring Boot
 - Bases de datos
-- Arquitectura de software
+- Desarrollo web
 
-### GitHub
-
-🔗 https://github.com/Brayanperdomoo
+🔗 GitHub:  
+https://github.com/Brayanperdomoo
 
 ---
 
 # 📈 Estado del proyecto
 
-🟢 En desarrollo activo
+🟢 Proyecto en desarrollo activo
 
 Próximas mejoras:
 
-- Notificaciones
 - Reportes PDF
 - Dashboard analytics
-- Gestión avanzada de pagos
+- Roles avanzados
 - Auditoría
+- Mejoras UI/UX
 
 ---
 
